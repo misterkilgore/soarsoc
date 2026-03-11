@@ -1,0 +1,176 @@
+timestamp,src_ip,dst_ip,src_name,dst_name,action,severity,message,user,protocol,sport,dport
+2026-03-11 19:34:20,192.168.1.51,10.10.10.6,PC-Giuseppe,Sensore-Temperatura-2,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.6 da 192.168.1.51,mario.rossi,TCP,21120,443
+2026-03-11 19:34:23,172.16.1.20,192.168.1.10,MailServer,ERP-Gestionale,SENSOR_DATA,INFO,Sensore 172.16.1.20: Temperatura 23.9°C - Umidità 44%,admin,ICMP,39673,80
+2026-03-11 19:34:25,141.168.223.254,192.168.1.10,Esterno,ERP-Gestionale,SENSOR_DATA,INFO,Sensore 141.168.223.254: Temperatura 22.7°C - Umidità 44%,sconosciuto,ICMP,30925,5432
+2026-03-11 19:34:26,192.168.1.50,10.10.10.50,PC-Mario,Centralina-Mungitura,FILE_ACCESS,INFO,Accesso file produzione_giornaliera.log su 10.10.10.50 da 192.168.1.50,produzione,UDP,4568,8080
+2026-03-11 19:34:29,192.168.1.100,10.10.10.6,Stampante-Ufficio,Sensore-Temperatura-2,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 192.168.1.100:4588 a 10.10.10.6:21 - TCP,giuseppe.verdi,TCP,4588,21
+2026-03-11 19:34:32,192.168.2.10,192.168.1.51,WiFi-Ospite-1,PC-Giuseppe,LOGIN_SUCCESS,INFO,Login riuscito - Utente: produzione da IP: 192.168.2.10,produzione,UDP,60150,8080
+2026-03-11 19:34:33,10.10.10.5,192.168.1.100,Sensore-Temperatura-1,Stampante-Ufficio,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 92 login falliti in 74 secondi da 10.10.10.5 verso 192.168.1.100,giuseppe.verdi,UDP,19205,3306
+2026-03-11 19:34:36,10.10.10.6,192.168.2.10,Sensore-Temperatura-2,WiFi-Ospite-1,LOGOUT,INFO,Logout utente produzione,produzione,ICMP,45289,8080
+2026-03-11 19:34:38,192.168.1.10,192.168.1.20,ERP-Gestionale,NAS-Formaggi,PORTS_SCAN,MEDIUM,Port scan rilevato da 192.168.1.10 - 10 porte in 233s,ospite,TCP,61072,8080
+2026-03-11 19:34:41,172.16.1.20,10.10.10.6,MailServer,Sensore-Temperatura-2,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.6 da 172.16.1.20,admin,UDP,47008,5432
+2026-03-11 19:34:42,10.10.10.100,172.16.1.10,Telecamera-Produzione,WebServer-WordPress,SENSOR_DATA,INFO,Sensore 10.10.10.100: Temperatura 2.6°C - Umidità 60%,giuseppe.verdi,UDP,55885,5432
+2026-03-11 19:34:44,214.191.229.74,192.168.1.50,Esterno,PC-Mario,FILE_ACCESS,INFO,Accesso file bilancio_Q1.xlsx su 192.168.1.50 da 214.191.229.74,produzione,UDP,10078,5432
+2026-03-11 19:34:45,10.10.10.5,192.168.1.20,Sensore-Temperatura-1,NAS-Formaggi,FILE_ACCESS,INFO,Accesso file clienti_privati.xlsx su 192.168.1.20 da 10.10.10.5,sconosciuto,ICMP,14878,21
+2026-03-11 19:34:47,80.145.58.221,10.10.10.5,Esterno,Sensore-Temperatura-1,LOGIN_FAILED,WARNING,Tentativo di login fallito per mario.rossi da IP: 80.145.58.221 - 66 tentativi,mario.rossi,TCP,10413,8080
+2026-03-11 19:34:50,192.168.1.50,192.168.1.20,PC-Mario,NAS-Formaggi,PORTS_SCAN,MEDIUM,Port scan rilevato da 192.168.1.50 - 26 porte in 163s,admin,UDP,52586,5432
+2026-03-11 19:34:51,29.19.65.127,192.168.2.10,Esterno,WiFi-Ospite-1,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 192.168.2.10 da 29.19.65.127,admin,TCP,5221,8080
+2026-03-11 19:34:53,192.168.1.10,10.10.10.6,ERP-Gestionale,Sensore-Temperatura-2,LOGOUT,INFO,Logout utente produzione,produzione,ICMP,51717,80
+2026-03-11 19:34:54,192.168.1.51,10.10.10.50,PC-Giuseppe,Centralina-Mungitura,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 21 login falliti in 39 secondi da 192.168.1.51 verso 10.10.10.50,produzione,ICMP,5371,8080
+2026-03-11 19:34:55,222.130.3.191,10.10.10.100,Esterno,Telecamera-Produzione,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 10.10.10.100 - Payload: ' OR '1'='1,admin,ICMP,55992,80
+2026-03-11 19:34:56,172.16.1.20,10.10.10.100,MailServer,Telecamera-Produzione,SENSOR_DATA,INFO,Sensore 172.16.1.20: Temperatura 21.5°C - Umidità 78%,admin,TCP,31609,80
+2026-03-11 19:34:58,192.168.1.100,192.168.2.11,Stampante-Ufficio,WiFi-Ospite-2,VPN_CONNECTION,INFO,Connessione VPN stabilita da 192.168.1.100 verso 192.168.2.11,admin,ICMP,30550,8080
+2026-03-11 19:34:59,10.10.10.6,10.10.10.100,Sensore-Temperatura-2,Telecamera-Produzione,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: amazon-alerts@secure-verify.net, Oggetto: URGENTE: Modifica contratto lavoro",giuseppe.verdi,TCP,37675,3306
+2026-03-11 19:35:02,10.10.10.50,10.10.10.6,Centralina-Mungitura,Sensore-Temperatura-2,PORTS_SCAN,MEDIUM,Port scan rilevato da 10.10.10.50 - 7 porte in 44s,admin,TCP,25796,80
+2026-03-11 19:35:04,192.168.2.10,192.168.1.20,WiFi-Ospite-1,NAS-Formaggi,SENSOR_DATA,INFO,Sensore 192.168.2.10: Temperatura 4.1°C - Umidità 56%,admin,TCP,12990,443
+2026-03-11 19:35:05,28.216.168.10,10.10.10.6,Esterno,Sensore-Temperatura-2,PORTS_SCAN,MEDIUM,Port scan rilevato da 28.216.168.10 - 55 porte in 183s,produzione,TCP,16811,8080
+2026-03-11 19:35:07,6.122.152.188,192.168.1.50,Esterno,PC-Mario,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,mario.rossi,UDP,8181,8080
+2026-03-11 19:35:08,107.129.225.49,192.168.1.20,Esterno,NAS-Formaggi,SENSOR_DATA,INFO,Sensore 107.129.225.49: Temperatura 5.0°C - Umidità 71%,giuseppe.verdi,TCP,45860,21
+2026-03-11 19:35:09,172.16.1.10,192.168.1.10,WebServer-WordPress,ERP-Gestionale,MALWARE_DETECTED,CRITICAL,Malware rilevato su 192.168.1.10 - Keylogger - Azione: Bloccato,ospite,UDP,34314,21
+2026-03-11 19:35:11,172.16.1.10,192.168.1.20,WebServer-WordPress,NAS-Formaggi,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 75 login falliti in 196 secondi da 172.16.1.10 verso 192.168.1.20,giuseppe.verdi,ICMP,4764,3306
+2026-03-11 19:35:12,192.168.1.20,192.168.1.254,NAS-Formaggi,Firewall-pfSense,PORTS_SCAN,MEDIUM,Port scan rilevato da 192.168.1.20 - 46 porte in 226s,giuseppe.verdi,UDP,1882,3306
+2026-03-11 19:35:15,10.10.10.50,172.16.1.20,Centralina-Mungitura,MailServer,LOGOUT,INFO,Logout utente admin,admin,ICMP,15253,443
+2026-03-11 19:35:17,117.79.80.157,192.168.1.100,Esterno,Stampante-Ufficio,LOGIN_SUCCESS,INFO,Login riuscito - Utente: mario.rossi da IP: 117.79.80.157,mario.rossi,ICMP,27864,5432
+2026-03-11 19:35:18,192.168.1.20,172.16.1.10,NAS-Formaggi,WebServer-WordPress,LOGIN_SUCCESS,INFO,Login riuscito - Utente: admin da IP: 192.168.1.20,admin,UDP,10827,3306
+2026-03-11 19:35:21,9.119.87.138,192.168.1.51,Esterno,PC-Giuseppe,SENSOR_ALERT,HIGH,ALLARME SENSORE 9.119.87.138: Temperatura fuori range! Valore: 7.7°C (range: 4.0-6.0°C),sconosciuto,TCP,48438,21
+2026-03-11 19:35:24,192.168.1.50,10.10.10.5,PC-Mario,Sensore-Temperatura-1,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 10.10.10.5 - Payload: <script>alert(1)</script>,giuseppe.verdi,UDP,36021,5432
+2026-03-11 19:35:27,192.168.2.10,192.168.1.100,WiFi-Ospite-1,Stampante-Ufficio,VPN_CONNECTION,INFO,Connessione VPN stabilita da 192.168.2.10 verso 192.168.1.100,admin,TCP,41347,21
+2026-03-11 19:35:28,150.244.127.119,192.168.1.51,Esterno,PC-Giuseppe,CONFIG_CHANGE,WARNING,Modifica configurazione su 192.168.1.51 da 150.244.127.119,sconosciuto,UDP,10080,21
+2026-03-11 19:35:31,185.95.192.4,192.168.2.10,Esterno,WiFi-Ospite-1,MALWARE_DETECTED,CRITICAL,Malware rilevato su 192.168.2.10 - Trojan - Azione: Messo in quarantena,produzione,UDP,13227,5432
+2026-03-11 19:35:32,192.168.1.51,172.16.1.10,PC-Giuseppe,WebServer-WordPress,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 192.168.1.51:42505 a 172.16.1.10:21 - ICMP,admin,ICMP,42505,21
+2026-03-11 19:35:34,192.168.1.100,172.16.1.20,Stampante-Ufficio,MailServer,PORTS_SCAN,MEDIUM,Port scan rilevato da 192.168.1.100 - 14 porte in 253s,produzione,ICMP,7765,21
+2026-03-11 19:35:35,192.168.2.10,172.16.1.10,WiFi-Ospite-1,WebServer-WordPress,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: amazon-alerts@secure-verify.net, Oggetto: Problema con il tuo ordine #12345",admin,TCP,38126,3306
+2026-03-11 19:35:38,11.173.37.148,10.10.10.6,Esterno,Sensore-Temperatura-2,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: hr@milkers-inc.local, Oggetto: URGENTE: Modifica contratto lavoro",admin,UDP,25095,443
+2026-03-11 19:35:40,172.16.1.20,192.168.2.10,MailServer,WiFi-Ospite-1,SENSOR_ALERT,HIGH,ALLARME SENSORE 172.16.1.20: Temperatura fuori range! Valore: 23.4°C (range: 4.0-6.0°C),admin,UDP,39991,5432
+2026-03-11 19:35:41,192.168.1.10,172.16.1.10,ERP-Gestionale,WebServer-WordPress,SENSOR_DATA,INFO,Sensore 192.168.1.10: Temperatura 5.6°C - Umidità 80%,giuseppe.verdi,ICMP,47999,443
+2026-03-11 19:35:44,169.214.113.90,10.10.10.6,Esterno,Sensore-Temperatura-2,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,sconosciuto,UDP,13699,3306
+2026-03-11 19:35:46,62.242.14.75,10.10.10.5,Esterno,Sensore-Temperatura-1,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: hr@milkers-inc.local, Oggetto: URGENTE: Modifica contratto lavoro",admin,TCP,8402,3306
+2026-03-11 19:35:48,10.10.10.6,10.10.10.100,Sensore-Temperatura-2,Telecamera-Produzione,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.100 da 10.10.10.6,giuseppe.verdi,TCP,60266,22
+2026-03-11 19:35:49,10.10.10.6,192.168.1.100,Sensore-Temperatura-2,Stampante-Ufficio,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 192.168.1.100 - Payload: admin'--,ospite,UDP,23542,22
+2026-03-11 19:35:52,39.159.25.117,10.10.10.100,Esterno,Telecamera-Produzione,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.100 da 39.159.25.117,admin,UDP,6760,3306
+2026-03-11 19:35:53,192.168.2.11,192.168.1.20,WiFi-Ospite-2,NAS-Formaggi,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 192.168.2.11:25173 a 192.168.1.20:80 - TCP,ospite,TCP,25173,80
+2026-03-11 19:35:54,10.10.10.50,192.168.1.50,Centralina-Mungitura,PC-Mario,FILE_ACCESS,INFO,Accesso file clienti_privati.xlsx su 192.168.1.50 da 10.10.10.50,giuseppe.verdi,ICMP,51374,443
+2026-03-11 19:35:56,192.168.1.50,10.10.10.5,PC-Mario,Sensore-Temperatura-1,VPN_CONNECTION,INFO,Connessione VPN stabilita da 192.168.1.50 verso 10.10.10.5,sconosciuto,UDP,27513,21
+2026-03-11 19:35:57,192.168.1.100,192.168.1.20,Stampante-Ufficio,NAS-Formaggi,LOGIN_SUCCESS,INFO,Login riuscito - Utente: giuseppe.verdi da IP: 192.168.1.100,giuseppe.verdi,ICMP,58070,22
+2026-03-11 19:35:59,104.117.12.22,192.168.1.50,Esterno,PC-Mario,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 192.168.1.50 da 104.117.12.22,produzione,TCP,3370,3306
+2026-03-11 19:36:01,192.168.2.10,10.10.10.100,WiFi-Ospite-1,Telecamera-Produzione,CONFIG_CHANGE,WARNING,Modifica configurazione su 10.10.10.100 da 192.168.2.10,mario.rossi,TCP,58619,3306
+2026-03-11 19:36:02,192.168.1.51,192.168.2.10,PC-Giuseppe,WiFi-Ospite-1,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: dirigenza@milkers-inc.local, Oggetto: Nuove policy aziendali - clicca per accettare",ospite,UDP,52359,8080
+2026-03-11 19:36:04,192.168.2.10,192.168.2.11,WiFi-Ospite-1,WiFi-Ospite-2,SENSOR_DATA,INFO,Sensore 192.168.2.10: Temperatura 7.5°C - Umidità 64%,mario.rossi,UDP,62528,443
+2026-03-11 19:36:07,10.10.10.6,172.16.1.20,Sensore-Temperatura-2,MailServer,FILE_ACCESS,INFO,Accesso file bilancio_Q1.xlsx su 172.16.1.20 da 10.10.10.6,ospite,UDP,22176,3306
+2026-03-11 19:36:10,192.168.1.100,192.168.1.50,Stampante-Ufficio,PC-Mario,MALWARE_DETECTED,CRITICAL,Malware rilevato su 192.168.1.50 - Ransomware - Azione: Rimosso,sconosciuto,ICMP,64258,5432
+2026-03-11 19:36:11,172.16.1.20,192.168.1.20,MailServer,NAS-Formaggi,SENSOR_DATA,INFO,Sensore 172.16.1.20: Temperatura 18.0°C - Umidità 68%,produzione,UDP,28540,5432
+2026-03-11 19:36:13,192.168.1.50,10.10.10.50,PC-Mario,Centralina-Mungitura,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.50 da 192.168.1.50,produzione,UDP,5618,443
+2026-03-11 19:36:15,192.168.1.20,192.168.1.50,NAS-Formaggi,PC-Mario,PORTS_SCAN,MEDIUM,Port scan rilevato da 192.168.1.20 - 29 porte in 29s,produzione,ICMP,26049,8080
+2026-03-11 19:36:16,36.139.180.251,10.10.10.100,Esterno,Telecamera-Produzione,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,admin,ICMP,42174,443
+2026-03-11 19:36:17,10.10.10.100,172.16.1.20,Telecamera-Produzione,MailServer,PORTS_SCAN,MEDIUM,Port scan rilevato da 10.10.10.100 - 66 porte in 124s,ospite,UDP,23089,22
+2026-03-11 19:36:20,192.168.2.11,192.168.1.20,WiFi-Ospite-2,NAS-Formaggi,PORTS_SCAN,MEDIUM,Port scan rilevato da 192.168.2.11 - 54 porte in 150s,ospite,TCP,55892,22
+2026-03-11 19:36:22,192.168.1.10,192.168.2.11,ERP-Gestionale,WiFi-Ospite-2,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,giuseppe.verdi,UDP,33135,443
+2026-03-11 19:36:24,192.168.1.254,10.10.10.50,Firewall-pfSense,Centralina-Mungitura,PORTS_SCAN,MEDIUM,Port scan rilevato da 192.168.1.254 - 10 porte in 178s,sconosciuto,ICMP,4571,8080
+2026-03-11 19:36:26,192.168.1.100,192.168.2.10,Stampante-Ufficio,WiFi-Ospite-1,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,mario.rossi,UDP,9302,8080
+2026-03-11 19:36:28,172.16.1.10,192.168.1.100,WebServer-WordPress,Stampante-Ufficio,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 172.16.1.10:3885 a 192.168.1.100:443 - TCP,sconosciuto,TCP,3885,443
+2026-03-11 19:36:29,192.168.1.20,10.10.10.5,NAS-Formaggi,Sensore-Temperatura-1,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 10.10.10.5 - Payload: '; DROP TABLE users; --,sconosciuto,UDP,21061,21
+2026-03-11 19:36:32,10.10.10.5,192.168.1.20,Sensore-Temperatura-1,NAS-Formaggi,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 10.10.10.5:32891 a 192.168.1.20:443 - TCP,giuseppe.verdi,TCP,32891,443
+2026-03-11 19:36:33,104.210.150.138,192.168.2.11,Esterno,WiFi-Ospite-2,CONFIG_CHANGE,WARNING,Modifica configurazione su 192.168.2.11 da 104.210.150.138,produzione,ICMP,30779,3306
+2026-03-11 19:36:35,214.14.226.76,10.10.10.50,Esterno,Centralina-Mungitura,FILE_ACCESS,INFO,Accesso file bilancio_Q1.xlsx su 10.10.10.50 da 214.14.226.76,giuseppe.verdi,ICMP,53754,443
+2026-03-11 19:36:36,10.10.10.5,192.168.1.100,Sensore-Temperatura-1,Stampante-Ufficio,LOGIN_SUCCESS,INFO,Login riuscito - Utente: admin da IP: 10.10.10.5,admin,TCP,17881,22
+2026-03-11 19:36:38,192.168.1.100,192.168.1.20,Stampante-Ufficio,NAS-Formaggi,CONFIG_CHANGE,WARNING,Modifica configurazione su 192.168.1.20 da 192.168.1.100,giuseppe.verdi,TCP,19944,5432
+2026-03-11 19:36:40,172.16.1.20,10.10.10.50,MailServer,Centralina-Mungitura,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: hr@milkers-inc.local, Oggetto: Problema con il tuo ordine #12345",mario.rossi,UDP,53698,443
+2026-03-11 19:36:42,192.168.1.100,192.168.1.10,Stampante-Ufficio,ERP-Gestionale,LOGOUT,INFO,Logout utente admin,admin,TCP,28355,3306
+2026-03-11 19:36:44,223.248.60.66,10.10.10.100,Esterno,Telecamera-Produzione,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.100 da 223.248.60.66,sconosciuto,ICMP,55226,3306
+2026-03-11 19:36:47,192.168.1.20,10.10.10.50,NAS-Formaggi,Centralina-Mungitura,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: dirigenza@milkers-inc.local, Oggetto: Problema con il tuo ordine #12345",mario.rossi,ICMP,29481,3306
+2026-03-11 19:36:49,18.34.70.177,192.168.1.51,Esterno,PC-Giuseppe,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 192.168.1.51 - Payload: ' OR '1'='1,mario.rossi,UDP,26296,8080
+2026-03-11 19:36:51,192.168.1.254,172.16.1.20,Firewall-pfSense,MailServer,LOGIN_FAILED,WARNING,Tentativo di login fallito per giuseppe.verdi da IP: 192.168.1.254 - 76 tentativi,giuseppe.verdi,UDP,16512,5432
+2026-03-11 19:36:53,192.168.1.50,10.10.10.5,PC-Mario,Sensore-Temperatura-1,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 94 login falliti in 16 secondi da 192.168.1.50 verso 10.10.10.5,produzione,UDP,6534,5432
+2026-03-11 19:36:55,192.168.1.10,192.168.1.20,ERP-Gestionale,NAS-Formaggi,LOGOUT,INFO,Logout utente produzione,produzione,TCP,61120,21
+2026-03-11 19:36:56,149.109.127.109,192.168.1.50,Esterno,PC-Mario,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,ospite,ICMP,34040,3306
+2026-03-11 19:36:58,23.99.4.138,10.10.10.5,Esterno,Sensore-Temperatura-1,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 10.10.10.5 - Payload: admin'--,ospite,UDP,63108,8080
+2026-03-11 19:37:00,192.168.1.20,172.16.1.10,NAS-Formaggi,WebServer-WordPress,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 48 login falliti in 190 secondi da 192.168.1.20 verso 172.16.1.10,giuseppe.verdi,ICMP,57294,443
+2026-03-11 19:37:02,192.168.1.254,10.10.10.50,Firewall-pfSense,Centralina-Mungitura,SENSOR_ALERT,HIGH,ALLARME SENSORE 192.168.1.254: Temperatura fuori range! Valore: 19.1°C (range: 4.0-6.0°C),giuseppe.verdi,ICMP,51872,443
+2026-03-11 19:37:04,192.168.1.20,172.16.1.10,NAS-Formaggi,WebServer-WordPress,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 192.168.1.20:54507 a 172.16.1.10:80 - TCP,admin,TCP,54507,80
+2026-03-11 19:37:05,194.150.19.15,10.10.10.5,Esterno,Sensore-Temperatura-1,SENSOR_DATA,INFO,Sensore 194.150.19.15: Temperatura 18.7°C - Umidità 47%,ospite,UDP,50186,21
+2026-03-11 19:37:07,192.168.1.254,192.168.1.20,Firewall-pfSense,NAS-Formaggi,SENSOR_ALERT,HIGH,ALLARME SENSORE 192.168.1.254: Temperatura fuori range! Valore: 2.8°C (range: 4.0-6.0°C),produzione,ICMP,1079,80
+2026-03-11 19:37:08,172.16.1.20,192.168.1.51,MailServer,PC-Giuseppe,CONFIG_CHANGE,WARNING,Modifica configurazione su 192.168.1.51 da 172.16.1.20,ospite,ICMP,27899,5432
+2026-03-11 19:37:11,192.168.1.20,10.10.10.5,NAS-Formaggi,Sensore-Temperatura-1,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.5 da 192.168.1.20,ospite,ICMP,49710,5432
+2026-03-11 19:37:12,172.16.1.10,192.168.1.20,WebServer-WordPress,NAS-Formaggi,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: noreply@paypal-update.com, Oggetto: URGENTE: Modifica contratto lavoro",mario.rossi,UDP,42840,8080
+2026-03-11 19:37:13,212.179.173.3,192.168.1.20,Esterno,NAS-Formaggi,CONFIG_CHANGE,WARNING,Modifica configurazione su 192.168.1.20 da 212.179.173.3,ospite,TCP,55307,21
+2026-03-11 19:37:16,109.80.240.8,192.168.1.50,Esterno,PC-Mario,VPN_CONNECTION,INFO,Connessione VPN stabilita da 109.80.240.8 verso 192.168.1.50,sconosciuto,UDP,34560,5432
+2026-03-11 19:37:19,192.168.1.51,192.168.2.11,PC-Giuseppe,WiFi-Ospite-2,FILE_ACCESS,INFO,Accesso file ordini_2026.csv su 192.168.2.11 da 192.168.1.51,ospite,UDP,38876,22
+2026-03-11 19:37:21,52.104.88.101,192.168.1.20,Esterno,NAS-Formaggi,CONFIG_CHANGE,WARNING,Modifica configurazione su 192.168.1.20 da 52.104.88.101,admin,ICMP,65519,8080
+2026-03-11 19:37:23,169.188.73.21,10.10.10.6,Esterno,Sensore-Temperatura-2,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.6 da 169.188.73.21,sconosciuto,ICMP,59400,3306
+2026-03-11 19:37:25,192.168.1.50,192.168.1.100,PC-Mario,Stampante-Ufficio,LOGOUT,INFO,Logout utente sconosciuto,sconosciuto,ICMP,43771,22
+2026-03-11 19:37:27,192.168.1.100,10.10.10.6,Stampante-Ufficio,Sensore-Temperatura-2,CONFIG_CHANGE,WARNING,Modifica configurazione su 10.10.10.6 da 192.168.1.100,mario.rossi,UDP,14583,21
+2026-03-11 19:37:29,192.168.2.10,10.10.10.5,WiFi-Ospite-1,Sensore-Temperatura-1,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 10.10.10.5 - Payload: ../etc/passwd,admin,UDP,60700,5432
+2026-03-11 19:37:31,192.168.2.10,192.168.1.10,WiFi-Ospite-1,ERP-Gestionale,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: noreply@paypal-update.com, Oggetto: Problema con il tuo ordine #12345",produzione,UDP,14498,21
+2026-03-11 19:37:32,10.10.10.50,192.168.1.50,Centralina-Mungitura,PC-Mario,LOGOUT,INFO,Logout utente produzione,produzione,TCP,55506,5432
+2026-03-11 19:37:35,10.10.10.100,10.10.10.5,Telecamera-Produzione,Sensore-Temperatura-1,LOGIN_FAILED,WARNING,Tentativo di login fallito per sconosciuto da IP: 10.10.10.100 - 21 tentativi,sconosciuto,ICMP,61143,3306
+2026-03-11 19:37:37,19.253.49.4,192.168.2.11,Esterno,WiFi-Ospite-2,MALWARE_DETECTED,CRITICAL,Malware rilevato su 192.168.2.11 - Keylogger - Azione: Bloccato,mario.rossi,UDP,17759,80
+2026-03-11 19:37:39,164.79.63.91,192.168.1.50,Esterno,PC-Mario,SENSOR_DATA,INFO,Sensore 164.79.63.91: Temperatura 7.1°C - Umidità 75%,ospite,UDP,47469,443
+2026-03-11 19:37:42,10.10.10.50,192.168.1.254,Centralina-Mungitura,Firewall-pfSense,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 192.168.1.254 - Payload: ' OR '1'='1,admin,TCP,23502,5432
+2026-03-11 19:37:44,192.168.1.50,192.168.1.254,PC-Mario,Firewall-pfSense,LOGOUT,INFO,Logout utente produzione,produzione,ICMP,10103,80
+2026-03-11 19:37:46,192.168.1.50,10.10.10.100,PC-Mario,Telecamera-Produzione,CONFIG_CHANGE,WARNING,Modifica configurazione su 10.10.10.100 da 192.168.1.50,mario.rossi,ICMP,64510,8080
+2026-03-11 19:37:47,176.114.244.84,10.10.10.6,Esterno,Sensore-Temperatura-2,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: noreply@paypal-update.com, Oggetto: Nuove policy aziendali - clicca per accettare",produzione,UDP,32971,5432
+2026-03-11 19:37:50,192.168.1.20,10.10.10.100,NAS-Formaggi,Telecamera-Produzione,CONFIG_CHANGE,WARNING,Modifica configurazione su 10.10.10.100 da 192.168.1.20,giuseppe.verdi,UDP,19455,80
+2026-03-11 19:37:51,172.16.1.10,192.168.1.254,WebServer-WordPress,Firewall-pfSense,FILE_ACCESS,INFO,Accesso file config_mungitrice.ini su 192.168.1.254 da 172.16.1.10,sconosciuto,UDP,53029,5432
+2026-03-11 19:37:53,17.185.203.31,10.10.10.5,Esterno,Sensore-Temperatura-1,SENSOR_DATA,INFO,Sensore 17.185.203.31: Temperatura 4.7°C - Umidità 65%,giuseppe.verdi,ICMP,47575,80
+2026-03-11 19:37:55,192.168.2.11,10.10.10.5,WiFi-Ospite-2,Sensore-Temperatura-1,VPN_CONNECTION,INFO,Connessione VPN stabilita da 192.168.2.11 verso 10.10.10.5,sconosciuto,UDP,37132,21
+2026-03-11 19:37:57,84.204.144.130,192.168.2.11,Esterno,WiFi-Ospite-2,LOGOUT,INFO,Logout utente sconosciuto,sconosciuto,ICMP,32585,22
+2026-03-11 19:37:58,10.10.10.100,192.168.1.20,Telecamera-Produzione,NAS-Formaggi,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 192.168.1.20 - Payload: <script>alert(1)</script>,admin,TCP,28379,443
+2026-03-11 19:38:01,47.2.146.58,10.10.10.50,Esterno,Centralina-Mungitura,PORTS_SCAN,MEDIUM,Port scan rilevato da 47.2.146.58 - 68 porte in 59s,admin,ICMP,32200,443
+2026-03-11 19:38:03,38.147.108.72,172.16.1.10,Esterno,WebServer-WordPress,SENSOR_DATA,INFO,Sensore 38.147.108.72: Temperatura 23.4°C - Umidità 63%,mario.rossi,UDP,17787,21
+2026-03-11 19:38:05,119.102.108.53,10.10.10.50,Esterno,Centralina-Mungitura,VPN_CONNECTION,INFO,Connessione VPN stabilita da 119.102.108.53 verso 10.10.10.50,admin,TCP,17133,5432
+2026-03-11 19:38:06,192.168.1.51,10.10.10.6,PC-Giuseppe,Sensore-Temperatura-2,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 98 login falliti in 282 secondi da 192.168.1.51 verso 10.10.10.6,giuseppe.verdi,TCP,19608,5432
+2026-03-11 19:38:09,192.168.1.254,192.168.1.20,Firewall-pfSense,NAS-Formaggi,SENSOR_DATA,INFO,Sensore 192.168.1.254: Temperatura 4.6°C - Umidità 68%,mario.rossi,ICMP,37045,3306
+2026-03-11 19:38:11,133.180.213.126,192.168.2.11,Esterno,WiFi-Ospite-2,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 192.168.2.11 da 133.180.213.126,sconosciuto,ICMP,30639,443
+2026-03-11 19:38:13,10.10.10.6,192.168.1.254,Sensore-Temperatura-2,Firewall-pfSense,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 10.10.10.6:37444 a 192.168.1.254:21 - ICMP,produzione,ICMP,37444,21
+2026-03-11 19:38:15,10.10.10.5,10.10.10.50,Sensore-Temperatura-1,Centralina-Mungitura,LOGOUT,INFO,Logout utente giuseppe.verdi,giuseppe.verdi,UDP,28481,22
+2026-03-11 19:38:17,172.16.1.20,192.168.1.51,MailServer,PC-Giuseppe,SENSOR_DATA,INFO,Sensore 172.16.1.20: Temperatura 20.6°C - Umidità 70%,mario.rossi,ICMP,13361,443
+2026-03-11 19:38:19,67.224.21.76,10.10.10.100,Esterno,Telecamera-Produzione,MALWARE_DETECTED,CRITICAL,Malware rilevato su 10.10.10.100 - Trojan - Azione: Bloccato,ospite,UDP,1389,22
+2026-03-11 19:38:20,200.142.122.189,10.10.10.5,Esterno,Sensore-Temperatura-1,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,mario.rossi,TCP,59936,5432
+2026-03-11 19:38:23,172.16.1.10,192.168.1.10,WebServer-WordPress,ERP-Gestionale,LOGIN_FAILED,WARNING,Tentativo di login fallito per produzione da IP: 172.16.1.10 - 35 tentativi,produzione,ICMP,10309,8080
+2026-03-11 19:38:24,147.30.196.56,172.16.1.20,Esterno,MailServer,VPN_CONNECTION,INFO,Connessione VPN stabilita da 147.30.196.56 verso 172.16.1.20,mario.rossi,ICMP,14968,21
+2026-03-11 19:38:27,192.168.1.20,192.168.1.100,NAS-Formaggi,Stampante-Ufficio,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: amazon-alerts@secure-verify.net, Oggetto: Nuove policy aziendali - clicca per accettare",sconosciuto,TCP,12822,443
+2026-03-11 19:38:29,10.10.10.5,10.10.10.50,Sensore-Temperatura-1,Centralina-Mungitura,VPN_CONNECTION,INFO,Connessione VPN stabilita da 10.10.10.5 verso 10.10.10.50,admin,ICMP,19860,80
+2026-03-11 19:38:30,192.168.1.100,192.168.1.20,Stampante-Ufficio,NAS-Formaggi,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 94 login falliti in 218 secondi da 192.168.1.100 verso 192.168.1.20,giuseppe.verdi,ICMP,50170,22
+2026-03-11 19:38:31,95.43.82.95,10.10.10.6,Esterno,Sensore-Temperatura-2,LOGIN_SUCCESS,INFO,Login riuscito - Utente: ospite da IP: 95.43.82.95,ospite,UDP,8285,22
+2026-03-11 19:38:33,10.10.10.5,10.10.10.100,Sensore-Temperatura-1,Telecamera-Produzione,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 66 login falliti in 209 secondi da 10.10.10.5 verso 10.10.10.100,admin,UDP,4883,443
+2026-03-11 19:38:35,172.16.1.20,192.168.1.254,MailServer,Firewall-pfSense,CONFIG_CHANGE,WARNING,Modifica configurazione su 192.168.1.254 da 172.16.1.20,ospite,ICMP,41294,80
+2026-03-11 19:38:37,192.168.1.20,10.10.10.100,NAS-Formaggi,Telecamera-Produzione,SENSOR_ALERT,HIGH,ALLARME SENSORE 192.168.1.20: Temperatura fuori range! Valore: 3.0°C (range: 4.0-6.0°C),admin,UDP,57571,22
+2026-03-11 19:38:39,10.10.10.100,172.16.1.10,Telecamera-Produzione,WebServer-WordPress,VPN_CONNECTION,INFO,Connessione VPN stabilita da 10.10.10.100 verso 172.16.1.10,produzione,ICMP,32902,5432
+2026-03-11 19:38:41,75.95.62.180,10.10.10.50,Esterno,Centralina-Mungitura,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 10.10.10.50 da 75.95.62.180,giuseppe.verdi,UDP,16640,5432
+2026-03-11 19:38:43,44.198.236.80,192.168.1.50,Esterno,PC-Mario,LOGIN_FAILED,WARNING,Tentativo di login fallito per produzione da IP: 44.198.236.80 - 58 tentativi,produzione,ICMP,59559,80
+2026-03-11 19:38:45,130.206.210.155,10.10.10.6,Esterno,Sensore-Temperatura-2,LOGIN_FAILED,WARNING,Tentativo di login fallito per produzione da IP: 130.206.210.155 - 70 tentativi,produzione,TCP,23141,8080
+2026-03-11 19:38:46,192.168.1.10,192.168.1.100,ERP-Gestionale,Stampante-Ufficio,FILE_ACCESS,INFO,Accesso file config_mungitrice.ini su 192.168.1.100 da 192.168.1.10,produzione,ICMP,29593,8080
+2026-03-11 19:38:49,10.10.10.100,192.168.1.10,Telecamera-Produzione,ERP-Gestionale,PORTS_SCAN,MEDIUM,Port scan rilevato da 10.10.10.100 - 66 porte in 92s,giuseppe.verdi,UDP,5162,22
+2026-03-11 19:38:50,192.168.1.10,192.168.2.10,ERP-Gestionale,WiFi-Ospite-1,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 75 login falliti in 153 secondi da 192.168.1.10 verso 192.168.2.10,mario.rossi,TCP,23536,5432
+2026-03-11 19:38:52,192.168.2.10,192.168.1.10,WiFi-Ospite-1,ERP-Gestionale,SENSOR_DATA,INFO,Sensore 192.168.2.10: Temperatura 19.1°C - Umidità 76%,produzione,UDP,6535,8080
+2026-03-11 19:38:54,190.0.84.203,192.168.1.10,Esterno,ERP-Gestionale,PORTS_SCAN,MEDIUM,Port scan rilevato da 190.0.84.203 - 29 porte in 268s,sconosciuto,UDP,51661,5432
+2026-03-11 19:38:57,18.106.94.209,10.10.10.100,Esterno,Telecamera-Produzione,SENSOR_ALERT,HIGH,ALLARME SENSORE 18.106.94.209: Temperatura fuori range! Valore: 20.3°C (range: 4.0-6.0°C),giuseppe.verdi,ICMP,49422,443
+2026-03-11 19:38:59,192.168.1.100,172.16.1.20,Stampante-Ufficio,MailServer,SENSOR_DATA,INFO,Sensore 192.168.1.100: Temperatura 17.9°C - Umidità 60%,mario.rossi,UDP,7268,5432
+2026-03-11 19:39:01,192.168.2.11,192.168.1.51,WiFi-Ospite-2,PC-Giuseppe,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 192.168.1.51 - Payload: '; DROP TABLE users; --,giuseppe.verdi,ICMP,20446,5432
+2026-03-11 19:39:03,172.16.1.20,10.10.10.100,MailServer,Telecamera-Produzione,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 10.10.10.100 - Payload: ' OR '1'='1,sconosciuto,TCP,1206,3306
+2026-03-11 19:39:05,192.168.1.51,192.168.1.254,PC-Giuseppe,Firewall-pfSense,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 192.168.1.51:38851 a 192.168.1.254:5432 - ICMP,produzione,ICMP,38851,5432
+2026-03-11 19:39:06,192.168.2.11,192.168.1.10,WiFi-Ospite-2,ERP-Gestionale,MALWARE_DETECTED,CRITICAL,Malware rilevato su 192.168.1.10 - CryptoMiner - Azione: Rimosso,sconosciuto,UDP,26222,3306
+2026-03-11 19:39:08,192.168.1.20,10.10.10.100,NAS-Formaggi,Telecamera-Produzione,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 192.168.1.20:28283 a 10.10.10.100:3306 - TCP,admin,TCP,28283,3306
+2026-03-11 19:39:09,121.19.193.240,192.168.1.50,Esterno,PC-Mario,LOGIN_SUCCESS,INFO,Login riuscito - Utente: sconosciuto da IP: 121.19.193.240,sconosciuto,TCP,18314,5432
+2026-03-11 19:39:11,10.10.10.6,172.16.1.10,Sensore-Temperatura-2,WebServer-WordPress,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: dirigenza@milkers-inc.local, Oggetto: URGENTE: Modifica contratto lavoro",mario.rossi,TCP,12591,80
+2026-03-11 19:39:14,25.64.173.201,192.168.1.50,Esterno,PC-Mario,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,giuseppe.verdi,TCP,23369,443
+2026-03-11 19:39:16,172.16.1.10,192.168.2.10,WebServer-WordPress,WiFi-Ospite-1,FILE_ACCESS,INFO,Accesso file clienti_privati.xlsx su 192.168.2.10 da 172.16.1.10,mario.rossi,ICMP,10766,80
+2026-03-11 19:39:19,10.10.10.50,192.168.2.11,Centralina-Mungitura,WiFi-Ospite-2,BACKUP_COMPLETED,INFO,Backup giornaliero completato con successo,ospite,UDP,37579,5432
+2026-03-11 19:39:20,140.183.173.3,192.168.1.20,Esterno,NAS-Formaggi,LOGIN_SUCCESS,INFO,Login riuscito - Utente: ospite da IP: 140.183.173.3,ospite,UDP,54416,5432
+2026-03-11 19:39:21,192.168.1.10,10.10.10.50,ERP-Gestionale,Centralina-Mungitura,LOGIN_FAILED,WARNING,Tentativo di login fallito per ospite da IP: 192.168.1.10 - 84 tentativi,ospite,TCP,33292,21
+2026-03-11 19:39:24,10.10.10.50,10.10.10.5,Centralina-Mungitura,Sensore-Temperatura-1,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: noreply@paypal-update.com, Oggetto: Problema con il tuo ordine #12345",sconosciuto,ICMP,15683,3306
+2026-03-11 19:39:25,194.192.142.170,192.168.1.100,Esterno,Stampante-Ufficio,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: noreply@paypal-update.com, Oggetto: Il tuo account è stato sospeso",mario.rossi,ICMP,12035,22
+2026-03-11 19:39:28,10.10.10.6,192.168.1.100,Sensore-Temperatura-2,Stampante-Ufficio,SQL_INJECTION,CRITICAL,Tentativo SQL Injection rilevato su 192.168.1.100 - Payload: <script>alert(1)</script>,produzione,TCP,50846,80
+2026-03-11 19:39:30,192.168.1.10,172.16.1.10,ERP-Gestionale,WebServer-WordPress,SENSOR_DATA,INFO,Sensore 192.168.1.10: Temperatura 6.8°C - Umidità 40%,ospite,ICMP,14862,5432
+2026-03-11 19:39:33,192.168.2.10,192.168.1.20,WiFi-Ospite-1,NAS-Formaggi,LOGOUT,INFO,Logout utente sconosciuto,sconosciuto,UDP,55380,3306
+2026-03-11 19:39:35,10.10.10.100,192.168.2.10,Telecamera-Produzione,WiFi-Ospite-1,SENSOR_DATA,INFO,Sensore 10.10.10.100: Temperatura 5.3°C - Umidità 50%,produzione,ICMP,45391,80
+2026-03-11 19:39:38,10.10.10.50,10.10.10.100,Centralina-Mungitura,Telecamera-Produzione,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 10.10.10.50:41640 a 10.10.10.100:21 - UDP,mario.rossi,UDP,41640,21
+2026-03-11 19:39:39,192.168.1.10,192.168.1.100,ERP-Gestionale,Stampante-Ufficio,LOGIN_SUCCESS,INFO,Login riuscito - Utente: ospite da IP: 192.168.1.10,ospite,ICMP,42465,80
+2026-03-11 19:39:41,192.168.1.51,10.10.10.50,PC-Giuseppe,Centralina-Mungitura,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: hr@milkers-inc.local, Oggetto: Problema con il tuo ordine #12345",produzione,TCP,17335,5432
+2026-03-11 19:39:43,162.87.44.185,192.168.1.254,Esterno,Firewall-pfSense,UNAUTHORIZED_ACCESS,CRITICAL,Tentativo accesso non autorizzato a 192.168.1.254 da 162.87.44.185,admin,UDP,30028,3306
+2026-03-11 19:39:44,59.245.57.125,172.16.1.10,Esterno,WebServer-WordPress,PHISHING_DETECTED,HIGH,"Email sospetta rilevata - Mittente: noreply@paypal-update.com, Oggetto: Il tuo account è stato sospeso",admin,TCP,39071,8080
+2026-03-11 19:39:45,172.16.1.10,10.10.10.6,WebServer-WordPress,Sensore-Temperatura-2,FILE_ACCESS,INFO,Accesso file produzione_giornaliera.log su 10.10.10.6 da 172.16.1.10,mario.rossi,TCP,53361,21
+2026-03-11 19:39:48,192.168.1.51,192.168.1.254,PC-Giuseppe,Firewall-pfSense,FIREWALL_BLOCK,MEDIUM,Firewall: Bloccato traffico da 192.168.1.51:15014 a 192.168.1.254:80 - TCP,ospite,TCP,15014,80
+2026-03-11 19:39:50,61.32.209.74,192.168.1.20,Esterno,NAS-Formaggi,BRUTE_FORCE,HIGH,POSSIBILE BRUTE FORCE: 99 login falliti in 172 secondi da 61.32.209.74 verso 192.168.1.20,admin,ICMP,58867,21
+2026-03-11 19:39:51,162.4.70.146,192.168.1.20,Esterno,NAS-Formaggi,VPN_CONNECTION,INFO,Connessione VPN stabilita da 162.4.70.146 verso 192.168.1.20,admin,ICMP,65303,21
+2026-03-11 19:39:53,167.96.86.195,192.168.1.10,Esterno,ERP-Gestionale,PORTS_SCAN,MEDIUM,Port scan rilevato da 167.96.86.195 - 64 porte in 63s,admin,TCP,43343,80
