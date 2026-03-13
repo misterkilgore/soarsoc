@@ -8,7 +8,7 @@ L'obiettivo del progetto è simulare le attività di un analista di sicurezza al
 
 In questa sezione verranno aggiunte progressivamente le descrizioni e gli obiettivi di ogni lezione.
 
-### Lezione 1: Log Management e Ticketing Base
+### Laboratorio 1: Log Management e Ticketing Base
 * **Obiettivo**: Simulare la ricezione di alert e il loro salvataggio strutturato.
 * **Descrizione**: 
     - Analisi preliminare dei log in formato CSV tramite la libreria `pandas`.
