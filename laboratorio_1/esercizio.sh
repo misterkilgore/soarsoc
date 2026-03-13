@@ -36,6 +36,13 @@ Eventualmente si possono sviluppare questi obiettivi avanzati:
 
 3. DRITTE PYTHON: LIBRERIA PANDAS (Lettura CSV)
 -----------------------------------------------
+Crea un ambiente virtuale:
+
+python -m venv env
+Microsoft: .\env\Scripts\activate
+Linux: source ./env/bin/activate
+pip install pandas yaml
+
 Per leggere i dati dal file CSV:
 
 import pandas as pd

@@ -1,6 +1,7 @@
 import json
 import csv
 import random
+import yaml
 from datetime import datetime, timedelta
 
 # Struttura Scenari per il Caseificio 4.0
@@ -77,10 +78,8 @@ with open('alerts.log', 'w') as f:
     for r in data_list:
         f.write(f"{r['timestamp']} MILKERS-GW {r['event_type']}[{r['alert_id']}]: {r['severity']} - src={r['source_ip']} dst={r['destination_ip']}\n")
 
-# --- YAML (Basic dump) ---
+# --- YAML (Corretto con libreria pyyaml) ---
 with open('alerts.yml', 'w') as f:
-    f.write("alerts:\n")
-    for r in data_list:
-        f.write(f"  - id: {r['alert_id']}\n    type: {r['event_type']}\n    sev: {r['severity']}\n")
+    yaml.dump({"alerts": data_list}, f, default_flow_style=False, sort_keys=False)
 
 print(f"Creati 100 allarmi con distribuzione: {weights}")
