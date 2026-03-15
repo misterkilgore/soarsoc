@@ -1,6 +1,3 @@
-#!/bin/sh
-
-cat << EOF
 ==============================================================
           SOC LAB: INCIDENT LOGGER - MILKERS Inc.
 ==============================================================
@@ -20,17 +17,31 @@ L'infrastruttura simulata e' composta dalle seguenti zone:
 
 I log vengono generati lanciando questo comando:
 
+python log_generator.py
 
 
 2. OBIETTIVO DELL'ESERCIZIO
 ---------------------------
+In questo esercizio, vogliamo partire dalle basi del SOC/SOAR:
+- Vogliamo assegnare con uno script i guasti ai tecnici (SOAR)
+- Vogliamo mantenere uno storico con lo stato dei guasti (SOC)
+
 Sviluppare uno script Python che:
 1. Legga un file di alert in formato CSV.
-2. Crei un file csv in cui ogni incidente viene assegnato ad un tecnico.
+2. Crei un file CSV in cui ogni incidente viene assegnato ad un tecnico.
+
+Il file CSV dovrà contenere le seguenti colonne:
+
+	- timestamp: il momento in cui è stato aperto il ticket (usa datetime.now())
+    - source_ip: l'IP che il tecnico dovrà poi controllare
+    - severity: il livello di severità (avrà un impatto sul lavoro del tecnico)
+    - description: aiuterà il lavoro del tecnico
+	- status: per il momento indichiamo unicamente "OPEN" per tutti i ticket
+
 
 Eventualmente si possono sviluppare questi obiettivi avanzati:
 1. Si connetta a un database SQLite locale.
-2. Crei una tabella 'incidents' se non esiste.
+2. Crei una tabella 'tickets' se non esiste.
 3. Inserisca i dati del CSV nel database.
 4. (Bonus) Provare a leggere le altre tipologie di file, oltre il csv.
 
@@ -41,7 +52,7 @@ Crea un ambiente virtuale:
 python -m venv env
 Microsoft: .\env\Scripts\activate
 Linux: source ./env/bin/activate
-pip install pandas yaml
+pip install pandas yaml iphyton
 
 Per leggere i dati dal file CSV:
 
@@ -81,5 +92,3 @@ conn.commit()
 conn.close()
 
 ==============================================================
-EOF
-
