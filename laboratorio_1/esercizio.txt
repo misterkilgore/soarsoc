@@ -33,6 +33,7 @@ Sviluppare uno script Python che:
 Il file CSV dovrà contenere le seguenti colonne:
 
 	- timestamp: il momento in cui è stato aperto il ticket (usa datetime.now())
+	- assigned_to: il tecnico a cui è associato
     - source_ip: l'IP che il tecnico dovrà poi controllare
     - severity: il livello di severità (avrà un impatto sul lavoro del tecnico)
     - description: aiuterà il lavoro del tecnico
