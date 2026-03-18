@@ -1,0 +1,80 @@
+==============================================================
+          SOC LAB: TICKET MANAGEMENT - MILKERS Inc.
+==============================================================
+
+1. RECAP TOPOLOGIA DI RETE (MILKERS Inc.)
+-----------------------------------------
+L'infrastruttura simulata è composta dalle seguenti zone:
+
+- OT-Production (192.168.10.0/24):
+  Asset critici: Silo-Control-Unit (.50), Temp-Sensor (.101).
+- IT-Office (192.168.20.0/24):
+  Asset: Workstation-Contabilità (.15), Printer (.200).
+- Server-Farm (10.0.0.0/24):
+  Asset: Logistics-DB (.10), Security-Gateway (.254).
+- Cloud-Azure (52.143.45.110):
+  Servizio: Gestionale ERP (MILK-ERP-Cloud).
+
+I ticket di sicurezza vengono generati e salvati nel file CSV `ticket.csv`.
+
+2. OBIETTIVO DELL'ESERCIZIO
+---------------------------
+In questo esercizio, affronteremo un aspetto fondamentale del SOC: la gestione e il monitoraggio dei ticket di sicurezza.
+
+Obiettivi principali:
+- Visualizzare i ticket in una tabella chiara e consultabile.
+- Modificare lo stato di ogni ticket per riflettere l’avanzamento delle attività di risposta.
+- Visualizzare grafici a barre per analizzare rapidamente la distribuzione dei ticket per gravità (severity) e stato (status).
+
+Questa attività aiuta a comprendere come mantenere sotto controllo gli incidenti di sicurezza, facilitare la collaborazione tra analisti e migliorare i tempi di risposta.
+
+3. SVILUPPO DELL'ESERCIZIO
+--------------------------
+Sviluppare un’applicazione Streamlit che:
+
+1. Legga il file `ticket.csv` contenente i ticket di sicurezza.
+2. Mostri una tabella con tutti i ticket.
+3. Permetta di cambiare lo stato di ogni ticket tramite un menu a tendina.
+4. Visualizzi due grafici a barre:
+   - Numero di ticket per livello di severità (LOW, MEDIUM, HIGH).
+   - Numero di ticket per stato (OPEN, IN_PROGRESS, RESOLVED, CLOSED).
+5. Consenta di salvare le modifiche dello stato dei ticket nella sessione.
+
+4. DRITTE STREAMLIT E PANDAS
+-----------------------------
+Per creare l’applicazione si consiglia di usare:
+
+- **pandas** per la lettura e manipolazione del file CSV.
+- **streamlit** per costruire l’interfaccia web interattiva.
+- **altair** per i grafici a barre.
+
+Esempi utili:
+
+```python
+import streamlit as st
+import pandas as pd
+import altair as alt
+
+# Caricamento dati
+df = pd.read_csv('ticket.csv')
+
+# Visualizzazione tabella
+st.dataframe(df)
+
+# Grafico a barre per severity
+severity_count = df['severity'].value_counts().reset_index()
+chart = alt.Chart(severity_count).mark_bar().encode(
+    x='index',
+    y='severity',
+    color='index'
+)
+st.altair_chart(chart)
+```
+
+5. CONSIGLI PRATICI
+-------------------
+- Per aggiornare lo stato di ogni ticket, utilizzare uno **selectbox** per ogni riga.
+- Per mantenere i dati modificati, sfruttare lo **st.session_state** di Streamlit.
+- Tenere il codice semplice e modulare per facilitare eventuali estensioni future.
+
+==============================================================
