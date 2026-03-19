@@ -13,8 +13,14 @@ In questa sezione verranno aggiunte progressivamente le descrizioni e gli obiett
 * **Descrizione**: 
     - Analisi preliminare dei log in formato CSV tramite la libreria `pandas`.
     - Normalizzazione dei dati e gestione della priorità (triage).
-    - Creazione di un database incidenti locale utilizzando `sqlite3`.
     - Assegnazione automatica dei ticket ai tecnici in base alla severità degli alert.
+	
+### Laboratorio 2: Dashboarding
+* **Obiettivo**: Simulare la creazione di una dashboard per la gestione di un SOC.
+* **Descrizione**: 
+    - Installazione di una dashboard remota utilizzando `streamlit`.
+	- Visualizzazione di tickets e metriche.
+	- Modifica dello stato di lavorazione dei ticket.
 
 ---
 
