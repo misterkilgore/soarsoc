@@ -46,14 +46,14 @@ Per creare l’applicazione si consiglia di usare:
 
 - **pandas** per la lettura e manipolazione del file CSV.
 - **streamlit** per costruire l’interfaccia web interattiva.
-- **altair** per i grafici a barre.
+- **matplotlib** per i grafici a barre.
 
 Esempi utili:
 
 ```python
 import streamlit as st
 import pandas as pd
-import altair as alt
+import matplotlib.pyplot as plt
 
 # Caricamento dati
 df = pd.read_csv('ticket.csv')
@@ -61,14 +61,15 @@ df = pd.read_csv('ticket.csv')
 # Visualizzazione tabella
 st.dataframe(df)
 
-# Grafico a barre per severity
-severity_count = df['severity'].value_counts().reset_index()
-chart = alt.Chart(severity_count).mark_bar().encode(
-    x='index',
-    y='severity',
-    color='index'
-)
-st.altair_chart(chart)
+# Grafico a barre
+status_counts = df['status'].value_counts()
+colors = {'OPEN': 'blue', 'WIP': 'orange', 'CLOSED': 'green'}
+fig, ax = plt.subplots()
+bars = ax.bar(status_counts.index, status_counts.values, color=[colors.get(x, 'gray') for x in status_counts.index])
+ax.set_title("Ticket per Status")
+ax.set_xlabel("Status")
+ax.set_ylabel("Count")
+st.pyplot(fig)
 ```
 
 5. CONSIGLI PRATICI
