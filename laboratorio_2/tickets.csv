@@ -5,7 +5,7 @@
 3,192.168.20.100,MEDIUM,Unauthorized_IoT_Communication,Detected MEDIUM priority incident in MILKERS network,WIP,Giovanni Bianchi,2026-03-18 14:12
 4,192.168.20.200,LOW,ICMP_Flood_Small,Detected LOW priority incident in MILKERS network,OPEN,Mario Rossi,2026-03-18 14:12
 5,192.168.20.100,MEDIUM,SQL_Injection_Attempt,Detected MEDIUM priority incident in MILKERS network,OPEN,Giovanni Bianchi,2026-03-18 14:12
-6,10.0.0.254,HIGH,Industrial_Exploit_Attempt,Detected HIGH priority incident in MILKERS network,OPEN,Giuseppe Neri,2026-03-18 14:12
+6,10.0.0.254,HIGH,Industrial_Exploit_Attempt,Detected HIGH priority incident in MILKERS network,CLOSED,Giuseppe Neri,2026-03-18 14:12
 7,192.168.20.100,MEDIUM,New_DHCP_Server_Detected,Detected MEDIUM priority incident in MILKERS network,OPEN,Giovanni Bianchi,2026-03-18 14:12
 8,192.168.10.101,LOW,NTP_Sync_Failure,Detected LOW priority incident in MILKERS network,OPEN,Mario Rossi,2026-03-18 14:12
 9,10.0.0.50,LOW,DNS_Query_Anomaly,Detected LOW priority incident in MILKERS network,OPEN,Mario Rossi,2026-03-18 14:12

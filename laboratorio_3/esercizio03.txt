@@ -1,0 +1,57 @@
+==============================================================
+IDENTITY MANGEMENT E CONTROLLO AUTOMATICO ACCESSI - MILKERS Inc.
+==============================================================
+
+1. OBIETTIVO DELL'ESERCIZIO
+---------------------------
+L'obiettivo è implementare un middleware di sicurezza utilizzando FastAPI che 
+gestisca le policy di accesso basate sullo stato dell'utente e sul numero di 
+tentativi falliti memorizzati in un database SQLite.
+
+2. COMPONENTI DEL SISTEMA
+-------------------------
+Il laboratorio si compone dei seguenti file:
+- crea_database.py       : Inizializza il database 'sicurezza.db' con record demo.
+- dashboard.py           : Interfaccia Streamlit per monitorare lo stato utenti.
+- simulatore_accessi.py  : Generatore di traffico (invia POST a 127.0.0.1:8000/log).
+- blocca_utente.py       : Script CLI per il blocco manuale.
+- sblocca_accessi.py     : Script CLI per lo sblocco manuale e reset contatore.
+- controlla_accessi.py   : Script CLI per leggere il numero di tentativi correnti.
+- fastapi/               : Cartella contenente i tutorial per lo sviluppo del server.
+
+3. CONSEGNA: SVILUPPO DEL SERVER DI SICUREZZA
+---------------------------------------------
+All'interno della cartella 'fastapi/', creare un file Python (es. 'main.py') 
+che avvii un server sulla porta 8000. Il server deve esporre un endpoint POST 
+'/log' capace di ricevere oggetti JSON con i campi:
+- username (string)
+- esito (string: "SUCCESS" o "FAILED")
+
+Il server deve implementare il seguente "SECURITY PLAYBOOK":
+
+A) SE IL LOGIN HA SUCCESSO ("SUCCESS"):
+   - Verificare lo stato dell'utente nel database.
+   - Se l'utente NON è bloccato, azzerare il numero di tentativi_falliti.
+   - Se l'utente è già 'BLOCKED', ignorare il comando di reset.
+
+B) SE IL LOGIN FALLISCE ("FAILED"):
+   - Incrementare di 1 il valore 'tentativi_falliti' nel database.
+   - Se il numero di tentativi falliti supera la soglia di 3 (>= 4), 
+     impostare automaticamente lo stato dell'utente su 'BLOCKED'.
+
+C) GESTIONE UTENTI BLOCCATI:
+   - Se un utente con stato 'BLOCKED' tenta un accesso (indipendentemente 
+     dall'esito), il server deve stampare a console il seguente messaggio:
+     "⚠️ ATTENZIONE: L'utente [NOME_UTENTE] è bloccato. Accesso negato. 
+      Contattare l'amministratore di sistema."
+
+4. PROCEDURA DI TEST
+--------------------
+1. Inizializzare il DB: `python crea_database.py`
+2. Avviare la dashboard: `streamlit run dashboard.py`
+3. Avviare il vostro server FastAPI.
+4. Avviare il simulatore: `python simulatore_accessi.py`
+5. Osservare nella dashboard come gli utenti vengono bloccati automaticamente
+   al superamento della soglia e utilizzare gli script CLI per intervenire.
+
+================================================================================
