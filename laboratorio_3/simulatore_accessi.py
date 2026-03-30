@@ -34,7 +34,7 @@ def simulate_traffic():
         }
         
         try:
-            response = requests.post(URL, json=payload)
+            response = requests.post(URL, params=payload)
             print(f"[LOG] Utente: {user:15} | Esito: {esito:8} | Status Server: {response.status_code}")
         except requests.exceptions.ConnectionError:
             print("❌ Errore: Il server FastAPI non è raggiungibile!")

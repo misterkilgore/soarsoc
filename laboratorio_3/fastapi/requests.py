@@ -1,23 +1,38 @@
 import requests
-import random
-import time
 
-SERVER_URL = "http://127.0.0.1:8000/login"  # URL del server FastAPI
+# ESEMPI DI RICHIESTE GET DA BROWSER (commentate):
+# http://127.0.0.1:8000/
+# http://127.0.0.1:8000/log?username=mario&esito=successo
+# http://127.0.0.1:8000/saluta?nome=Marco
+# http://127.0.0.1:8000/greet?name=Alice
+# http://127.0.0.1:8000/greet
+# http://127.0.0.1:8000/sum?a=5&b=3
 
-def simulate_login(ip, success=True):
-    params = {
-        "ip": ip,
-        "success": "true" if success else "false"
-    }
-    response = requests.get(SERVER_URL, params=params)
-    print(f"Login {'success' if success else 'failed'} from {ip} -> {response.text}")
+BASE_URL = "http://127.0.0.1:8000"
 
-if __name__ == "__main__":
-    test_ips = ["192.168.1.10", "10.0.0.5", "203.0.113.42"]
-    
-    # Simula eventi casuali
-    for _ in range(20):
-        ip = random.choice(test_ips)
-        success = random.choice([True, False, False])  # più probabilità di fallimento
-        simulate_login(ip, success)
-        time.sleep(0.5)
+# GET /
+response = requests.get(f"{BASE_URL}/")
+print("GET /:", response.json())
+
+# GET /log con parametri
+response = requests.get(f"{BASE_URL}/log", params={"username": "mario", "esito": "successo"})
+print("GET /log:", response.json())
+
+# GET /saluta
+response = requests.get(f"{BASE_URL}/saluta", params={"nome": "Marco"})
+print("GET /saluta:", response.json())
+
+# GET /greet (con e senza parametro)
+response = requests.get(f"{BASE_URL}/greet", params={"name": "Alice"})
+print("GET /greet with name:", response.json())
+
+response = requests.get(f"{BASE_URL}/greet")
+print("GET /greet default:", response.json())
+
+# GET /sum
+response = requests.get(f"{BASE_URL}/sum", params={"a": 5, "b": 3})
+print("GET /sum:", response.json())
+
+# POST /log
+response = requests.post(f"{BASE_URL}/log", params={"username": "anna", "esito": "fallito"})
+print("POST /log:", response.status_code)

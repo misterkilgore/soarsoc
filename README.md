@@ -21,6 +21,13 @@ In questa sezione verranno aggiunte progressivamente le descrizioni e gli obiett
     - Installazione di una dashboard remota utilizzando `streamlit`.
 	- Visualizzazione di tickets e metriche.
 	- Modifica dello stato di lavorazione dei ticket.
+	
+	### Laboratorio 3: Workflow e FastAPI
+* **Obiettivo**: Simulare un workflow di risposta ad incidenti in cui due sistemi comunicano.
+* **Descrizione**: 
+    - Creazione di un server di gestione utilizzando `FastAPI`.
+	- Implementazione di playbook per gestire il login.
+	- Modifica dello stato degli utenti.
 
 ---
 

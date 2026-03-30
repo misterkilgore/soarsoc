@@ -7,6 +7,20 @@ app = FastAPI()
 def hello_world():
     return "HELLO WORLD!"
 
+@app.get("/log")
+def print_log(username, esito):
+    return {
+    'username': username,
+    'esito':esito
+    }
+    
+@app.post("/log")
+def post_log(username, esito):
+    print( {
+    'username': username,
+    'esito':esito
+    })
+
 @app.get("/saluta")
 def saluta(nome: str):
     return {"messaggio": f"Ciao, {nome}!"}
