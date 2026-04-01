@@ -4,7 +4,7 @@ import time
 import random
 
 # Configurazione
-URL = "http://127.0.0.1:8000/log"
+URL = "http://127.0.0.1:8000/log/"
 TIMEOUT_MIN = 1  # secondi
 TIMEOUT_MAX = 5  # secondi
 
