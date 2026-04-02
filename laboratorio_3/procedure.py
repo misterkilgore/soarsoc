@@ -1,10 +1,18 @@
 import sqlite3
 import sys
 
+_DB_PATH = 'sicurezza.db'
+
+def get_cursor():
+    
+    conn = sqlite3.connect(_DB_PATH)
+    cursor = conn.cursor()
+    return conn, cursor
+    
+
 def aumenta_tentativi(user):
 
-    conn = sqlite3.connect('sicurezza.db')
-    cursor = conn.cursor()
+    conn, cursor = get_cursor()
 
     cursor.execute("""
         UPDATE utenti 
@@ -25,9 +33,9 @@ def aumenta_tentativi(user):
         return 1
 
 def blocca_utente(user):
-    conn = sqlite3.connect('sicurezza.db')
-    cursor = conn.cursor()
-
+    
+    conn, cursor = get_cursor()
+    
     cursor.execute("UPDATE utenti SET stato = 'BLOCKED' WHERE username = ?", (user,))
     conn.commit()
 
@@ -40,9 +48,9 @@ def blocca_utente(user):
         return 1
 
 def controlla_accessi(user):
-    conn = sqlite3.connect('sicurezza.db')
-    cursor = conn.cursor()
-
+    
+    conn, cursor = get_cursor()
+    
     cursor.execute("SELECT tentativi_falliti FROM utenti WHERE username = ?", (user,))
     result = cursor.fetchone()
     conn.close()
@@ -54,10 +62,9 @@ def controlla_accessi(user):
         return 0
 
 def sblocca_accessi(user):
-    conn = sqlite3.connect('sicurezza.db')
-    cursor = conn.cursor()
+    
+    conn, cursor = get_cursor()
 
-    # Sblocca e resetta i tentativi
     cursor.execute("UPDATE utenti SET stato = 'OK', tentativi_falliti = 0 WHERE username = ?", (user,))
     conn.commit()
 
