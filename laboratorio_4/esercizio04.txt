@@ -1,0 +1,38 @@
+==============================================================
+AUTOMAZIONE NETWORK SECURITY: GESTIONE FIREWALL - MILKERS Inc.
+==============================================================
+
+1. OBIETTIVO DELL'ESERCIZIO
+---------------------------
+L'obiettivo è implementare una libreria di amministrazione automatica per 
+il firewall di sistema (iptables) utilizzando Python. Il sistema deve essere 
+in grado di bloccare IP malevoli, sbloccarli e monitorare lo stato attuale 
+delle regole di difesa.
+
+2. COMPONENTI DEL SISTEMA
+-------------------------
+Il laboratorio si compone dei seguenti file e strumenti:
+- start_fw.sh            : Shell script di esempio per il firewall della rete "Milkers"
+
+
+3. CONSEGNA: SVILUPPO DELLA LIBRERIA DI DIFESA
+----------------------------------------------
+All'interno del file 'firewall_manager.py', implementare le funzioni necessarie
+per interagire con il firewall di sistema tramite il modulo 'os'. 
+La libreria deve esporre le seguenti funzionalità:
+
+A) FUNZIONE DI BLOCCO (blocca_ip):
+   - Riceve in ingresso un indirizzo IP (stringa).
+   - Esegue il comando di sistema per aggiungere una regola 'DROP' in INPUT.
+   - Messaggio atteso: "[BLOCK] IP {ip} aggiunto alla blacklist del firewall."
+
+B) FUNZIONE DI SBLOCCO (sblocca_ip):
+   - Riceve in ingresso un indirizzo IP (stringa).
+   - Rimuove la regola specifica dal firewall per consentire nuovamente il traffico.
+   - Messaggio atteso: "[UNBLOCK] IP {ip} rimosso con successo."
+
+C) FUNZIONE DI MONITORAGGIO (mostra_bloccati):
+   - Esegue il comando per elencare le regole attive nel firewall.
+   - Deve mostrare chiaramente quali IP sono attualmente respinti dal sistema.
+
+================================================================================
