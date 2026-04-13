@@ -1,0 +1,53 @@
+[
+  {
+    "timestamp": "2026-04-11T16:00:01.123456+0200",
+    "event_type": "dns",
+    "src_ip": "192.168.20.15",
+    "src_port": 54321,
+    "dest_ip": "8.8.8.8",
+    "dest_port": 53,
+    "proto": "UDP",
+    "dns": {
+      "type": "query",
+      "rrname": "erp.milkers-inc.cloud",
+      "rrtype": "A"
+    }
+  },
+  {
+    "timestamp": "2026-04-11T16:05:22.987654+0200",
+    "event_type": "alert",
+    "src_ip": "172.16.0.45",
+    "src_port": 49152,
+    "dest_ip": "192.168.10.50",
+    "dest_port": 502,
+    "proto": "TCP",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 2010999,
+      "rev": 1,
+      "signature": "ET USER_AGENTS Suspicious OT-Modbus Access from VPN",
+      "category": "Potentially Bad Traffic",
+      "severity": 2
+    },
+    "payload_printable": "NM...READ_COILS...PLC-01"
+  },
+  {
+    "timestamp": "2026-04-11T16:10:45.001234+0200",
+    "event_type": "alert",
+    "src_ip": "185.220.101.10",
+    "src_port": 31337,
+    "dest_ip": "10.0.0.10",
+    "dest_port": 5432,
+    "proto": "TCP",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 2100498,
+      "rev": 7,
+      "signature": "ET EXPLOIT PostgreSQL Remote Code Execution Attempt",
+      "category": "Attempted Administrator Privilege Gain",
+      "severity": 1
+    }
+  }
+]

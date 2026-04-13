@@ -1,0 +1,53 @@
+==============================================================
+AUTOMAZIONE NETWORK SECURITY: GESTIONE FIREWALL - MILKERS Inc.
+==============================================================
+
+1. OBIETTIVO DELL'ESERCIZIO
+---------------------------
+L'obiettivo è implementare un sistema di difesa reattivo per la rete della 
+MILKERS Inc. Utilizzando Python, gli studenti dovranno creare uno script che:
+1. Analizza i log generati da Suricata (formato JSON).
+2. Identifica tentativi di attacco critici (Severity 1).
+3. Interagisce con il firewall di sistema (iptables) per bloccare 
+   automaticamente gli IP sorgente malevoli.
+
+2. COMPONENTI DEL SISTEMA
+-------------------------
+Il laboratorio si compone dei seguenti file e strumenti:
+- eve.json               : Il file di log generato da Suricata (simulato).
+- start_fw.sh            : Shell script per la configurazione iniziale della rete.
+- firewall_manager.py    : La libreria Python di difesa da completare.
+- analyzer.py            : Lo script principale che legge il JSON e usa la libreria.
+
+3. CONSEGNA: SVILUPPO DELLA LIBRERIA DI DIFESA
+----------------------------------------------
+All'interno del file 'firewall_manager.py', implementare le funzioni necessarie
+per interagire con il firewall di sistema tramite il modulo 'subprocess' o 'os'. 
+La libreria deve esporre le seguenti funzionalità:
+
+A) FUNZIONE DI BLOCCO (blocca_ip):
+   - Riceve in ingresso un indirizzo IP (stringa).
+   - Esegue il comando: iptables -A INPUT -s {ip} -j DROP
+   - Messaggio atteso: "[BLOCK] IP {ip} aggiunto alla blacklist del firewall."
+
+B) FUNZIONE DI SBLOCCO (sblocca_ip):
+   - Riceve in ingresso un indirizzo IP (stringa).
+   - Esegue il comando: iptables -D INPUT -s {ip} -j DROP
+   - Messaggio atteso: "[UNBLOCK] IP {ip} rimosso con successo."
+
+C) FUNZIONE DI MONITORAGGIO (mostra_bloccati):
+   - Esegue il comando: iptables -L INPUT -n --line-numbers
+   - Deve mostrare chiaramente quali IP sono attualmente respinti dal sistema.
+
+4. LOGICA DI ANALISI (ANALYZER.PY)
+----------------------------------
+Lo studente dovrà implementare un ciclo di lettura del file 'eve.json' che:
+- Carichi i dati tramite il modulo 'json'.
+- Verifichi se 'event_type' è uguale a 'alert'.
+- Se 'alert.severity' è uguale a 1, richiami 'firewall_manager.blocca_ip()'.
+
+NOTE DI SICUREZZA:
+- L'esecuzione dei comandi iptables richiede privilegi di ROOT (sudo).
+- Attenzione: Non bloccare gli IP della sottorete di gestione (es. 127.0.0.1).
+
+================================================================================
