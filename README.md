@@ -22,20 +22,33 @@ In questa sezione verranno aggiunte progressivamente le descrizioni e gli obiett
 	- Visualizzazione di tickets e metriche.
 	- Modifica dello stato di lavorazione dei ticket.
 	
-	### Laboratorio 3: Workflow e FastAPI
+### Laboratorio 3: Workflow e FastAPI
 * **Obiettivo**: Simulare un workflow di risposta ad incidenti in cui due sistemi comunicano.
 * **Descrizione**: 
     - Creazione di un server di gestione utilizzando `FastAPI`.
 	- Implementazione di playbook per gestire il login.
 	- Modifica dello stato degli utenti.
 
+### Laboratorio 4: Scrittura di una libreria per la gestione firewall
+* **Obiettivo**: Sviluppare una libreria Python per la gestione programmata delle regole firewall.
+* **Descrizione**: 
+    - Creazione, modifica e cancellazione di regole firewall.
+    - Automazione della configurazione firewall per migliorare la sicurezza di rete.
+
+### Laboratorio 5: Lettura del file eve.json di Suricata per la creazione di regole
+* **Obiettivo**: Automatizzare la generazione di regole firewall basate sugli eventi rilevati da Suricata.
+* **Descrizione**: 
+    - Parsing del file `eve.json` prodotto da Suricata.
+    - Estrazione di informazioni rilevanti per la creazione dinamica di regole firewall.
+
 ---
 
 ## Requisiti Tecnici
-Per eseguire gli script presenti in questa repository, è necessario avere installato:
-* Python 3.x
-* Libreria Pandas (`pip install pandas`)
-* SQLite (integrato in Python)
+Per eseguire gli script presenti in questa repository, installare le dipendenze tramite il file `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 *Repository mantenuta per scopi didattici.*
