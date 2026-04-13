@@ -1,0 +1,9 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-04-13 15:00
+Nmap scan report for 192.168.1.1
+Host is up (0.0010s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+MAC Address: 00:0C:29:68:22:5B (VMware)

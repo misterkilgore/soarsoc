@@ -1,0 +1,55 @@
+{
+  "company_name": "MILKERS Inc. - Caseificio 4.0",
+  "infrastructure_version": "2.1",
+  "network_topology": {
+    "subnets": [
+      {
+        "name": "OT-Production-Network",
+        "vlan": 10,
+        "range": "192.168.10.0/24",
+        "description": "Rete sensori IoT, PLC e sistemi di controllo pastorizzazione",
+        "criticality": "High",
+        "assets": [
+          {"id": "plc-01", "name": "Silo-Control-Unit", "ip": "192.168.10.50", "type": "Industrial Controller"},
+          {"id": "iot-sens-05", "name": "Temp-Sensor-Fermentazione", "ip": "192.168.10.101", "type": "Sensor"}
+        ]
+      },
+      {
+        "name": "IT-Office-Network",
+        "vlan": 20,
+        "range": "192.168.20.0/24",
+        "description": "Postazioni uffici amministrativi e marketing",
+        "criticality": "Medium",
+        "assets": [
+          {"id": "pc-admin-01", "name": "Workstation-Contabilita", "ip": "192.168.20.15", "type": "Workstation"},
+          {"id": "print-01", "name": "Printer-Ufficio-Soci", "ip": "192.168.20.200", "type": "Peripheral"}
+        ]
+      },
+      {
+        "name": "Server-Farm-OnPrem",
+        "vlan": 30,
+        "range": "10.0.0.0/24",
+        "description": "Server locali per logistica e database backup",
+        "criticality": "High",
+        "assets": [
+          {"id": "srv-log-01", "name": "Logistics-DB", "ip": "10.0.0.10", "type": "Server"},
+          {"id": "srv-proxy", "name": "Security-Gateway", "ip": "10.0.0.254", "type": "Firewall/Proxy"}
+        ]
+      }
+    ],
+    "cloud_services": [
+      {
+        "service_name": "MILK-ERP-Cloud",
+        "provider": "Azure",
+        "public_endpoint": "https://erp.milkers-inc.cloud",
+        "api_gateway_ip": "52.143.45.110",
+        "description": "Gestionale ordini e fatturazione",
+        "auth_method": "SAML / Azure AD"
+      }
+    ],
+    "vpn_access": {
+      "range": "172.16.0.0/24",
+      "description": "Accesso remoto per manutentori esterni impianti OT"
+    }
+  }
+}
